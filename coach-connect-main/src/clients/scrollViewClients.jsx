@@ -27,7 +27,7 @@ const client = [{
 
 export const ScrollViewClients = () => {
     return (
-      <div className="bg-off-white h-screen w-auto pt-16" style={{
+      <div className="bg-off-white h-screen w-auto pt-16 shadow-xl" style={{
         position: "relative",
         left: 0,
         top: 0,

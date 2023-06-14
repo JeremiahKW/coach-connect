@@ -1,8 +1,8 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTableColumns } from "@fortawesome/free-solid-svg-icons";
 import { faCalendarDays } from "@fortawesome/free-solid-svg-icons";
 import { faNoteSticky } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
+import { TableColumnButton } from "./tableColumnButton"
 
 function Navbar() {
 
@@ -31,11 +31,6 @@ function Navbar() {
         cursor: "pointer"
       };
     
-      const tableColumnsIconStyles = {
-        ...iconStyles,
-        color: hoverStates.tableColumns ? "#6d8773" : "#95ac9a"
-      };
-    
       const calendarDaysIconStyles = {
         ...iconStyles,
         color: hoverStates.calendarDays ? "#6d8773" : "#95ac9a"
@@ -55,14 +50,7 @@ function Navbar() {
                 <div className="mx-auto">
                     <img src={require("../images/CC.png")} alt="Coach Connect Logo" className="h-24 w-24 mx-auto" style={{cursor: "pointer"}}/>
                 </div>
-                <div className="mx-auto h-12 w-12 mt-16 mb-16">
-                    <FontAwesomeIcon 
-                    icon={faTableColumns} 
-                    className="mx-auto h-12 w-12 icon" 
-                    style={tableColumnsIconStyles}
-                    onMouseEnter={() => handleMouseEnter("tableColumns")}
-                    onMouseLeave={() => handleMouseLeave("tableColumns")} />
-                </div>
+                <TableColumnButton />
                 <div className="mx-auto h-12 w-12 mt-16 mb-16">
                     <FontAwesomeIcon 
                     icon={faCalendarDays} 
