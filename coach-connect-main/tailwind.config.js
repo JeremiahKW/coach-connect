@@ -6,8 +6,11 @@ module.exports = {
   theme: {
     extend: {
       boxShadow: {
-        custom: '20px 0 20px 0 rgb(0 0 0 / 0.1)'
+        custom: '20px 0 20px 0 rgb(0 0 0 / 0.1)',
+        rightOnlyShadow: '8px 0 8px rgba(0 0 0 / 0.25)'
       },
+      
+      
       colors: {
         'off-white': '#F2F2F2',
         'pale-green': '#95AC9A',
