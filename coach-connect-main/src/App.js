@@ -1,7 +1,6 @@
 import React from 'react';
-import { SplitScreen } from './Components/Splitscreen';
-import Navbar from './Components/navbar';
-import { ScrollViewClients } from './clients/scrollViewClients';
+import Navbar from './Components/NavBar/navbar';
+import { ScrollViewClients } from './Components/ClientSearch/scrollViewClients';
 
 
 const LeftSideComponent = () => {
@@ -22,11 +21,7 @@ const RightSideComponent = () => {
 
 function App() {
   return (
-    <SplitScreen leftWeight={1} middleWeight={3} rightWeight={10}>
-      <LeftSideComponent />
-      <MiddleComponent />
-      <RightSideComponent />
-    </SplitScreen>
+    <Navbar />
   );
 }
 

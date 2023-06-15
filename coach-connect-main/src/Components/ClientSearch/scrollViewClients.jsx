@@ -1,6 +1,6 @@
-import { clientListItem } from './clients';
-import { RegularList } from '../Components/regularList';
-import { RoundedSearchBar } from '../Components/roundedSearchBar';
+import { clientListItem } from './clientCard';
+import { RegularList } from '../../ListMapping/regularList';
+import { RoundedSearchBar } from './roundedSearchBar';
 
 const client = [{
     name: 'Jeremiah Williams',
