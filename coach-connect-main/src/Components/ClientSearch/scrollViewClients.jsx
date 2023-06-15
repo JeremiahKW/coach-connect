@@ -1,6 +1,8 @@
 import { clientListItem } from './clientCard';
 import { RegularList } from '../../ListMapping/regularList';
 import { RoundedSearchBar } from './roundedSearchBar';
+import React, { useState } from 'react';
+
 
 const client = [{
     name: 'Jeremiah Williams',
