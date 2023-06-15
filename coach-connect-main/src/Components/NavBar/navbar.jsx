@@ -62,7 +62,7 @@ const Navbar = () => {
   return (
     <div className="flex h-screen">
       {/* Navbar */}
-      <div className="shadow-rs flex-none w-32 bg-off-white text-black flex flex-col justify-center">
+      <div className="shadow-rs flex-none w-32 bg-off-white text-black flex flex-col justify-center z-10">
         <div>
             <img src={require("../../images/CC.png")} alt="Coach Connect Logo" className="h-24 w-24 mt-6 mx-auto" style={{cursor: "pointer"}}/>
         </div>
@@ -152,15 +152,15 @@ const Navbar = () => {
         </ul>
       </div>
       {/* Main content */}
-      <div className="flex-grow relative overflow-hidden">
         {/* Content for each component */}
         <div
           className={`absolute top-0 left-0 h-full w-1/4 transition-transform ${
-            navVisible ? 'transform translate-x-0' : 'transform -translate-x-full'
+            navVisible ? 'transform translate-x-1/4' : 'transform -translate-x-full'
           }`}
           style={{
             transitionProperty: 'transform',
             transitionDuration: '0.75s',
+            zIndex: 0,
           }}
         >
           {activeIndex === 0 && ( // Only render Component1 when activeIndex is 0
@@ -169,32 +169,13 @@ const Navbar = () => {
             </div>
           )}
         </div>
-      </div>
+      
     </div>
   );
 };
 
-// Rest of the components...
 
-const Component1 = () => {
-  return (
-    <div className="h-full">
-      <ScrollViewClients />
-    </div>
-  );
-};
 
-const Component2 = () => {
-  return <div>Component 2 Content</div>;
-};
-
-const Component3 = () => {
-  return <div>Component 3 Content</div>;
-};
-
-const Component4 = () => {
-  return <div>Component 4 Content</div>;
-};
 
 export default Navbar;
 
