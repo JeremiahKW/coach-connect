@@ -159,7 +159,7 @@ const Navbar = () => {
           }`}
           style={{
             transitionProperty: 'transform',
-            transitionDuration: '0.75s',
+            transitionDuration: '1.25s',
             zIndex: 0,
           }}
         >
